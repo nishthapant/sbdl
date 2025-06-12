@@ -8,7 +8,8 @@ pipeline {
                   export PATH=$PATH:/var/lib/jenkins/.local/bin
                   echo $PATH
                   which pipenv
-                  pipenv --python python3 sync
+                  pipenv --rm || true
+                  pipenv --python /usr/bin/python3.10 sync
                 '''
             }
         }
